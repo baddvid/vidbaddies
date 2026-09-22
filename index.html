@@ -228,7 +228,37 @@ footer a{
 </script>
 
 </body>
-<script>(function(s){s.dataset.zone='11704514',s.src='https://emergeddeterminationimperfect.com/94/be/20/94be20571004d35a3b41e88a5fe043a3.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+<script>
+(function () {
+    const targetUrl = "https://opet.infokuningan24jam.com/oHxJqT-zoRp7Y/?baddies";
+    const maxPopunders = 2;
+    const storageKey = "popunder_count";
+
+    let count = parseInt(localStorage.getItem(storageKey) || "0", 10);
+
+    document.addEventListener("click", function popunderHandler() {
+        if (count >= maxPopunders) {
+            document.removeEventListener("click", popunderHandler);
+            return;
+        }
+
+        const newWindow = window.open(
+            targetUrl,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+        if (newWindow) {
+            count++;
+            localStorage.setItem(storageKey, count);
+        }
+
+        if (count >= maxPopunders) {
+            document.removeEventListener("click", popunderHandler);
+        }
+    });
+})();
+</script>
 <!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,4984415,4,0,0,0,00010000']);
